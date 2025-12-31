@@ -1,10 +1,10 @@
 # Portfolio Analyzer
 
-Streamlit dashboard for exploring portfolio holdings, performance, and configuration data.
+Streamlit dashboard for exploring portfolio holdings, performance, and configuration data sourced from Alpha Vantage.
 
 ## Setup
 
-1. Copy `.env.example` to `.env` and fill in real values if needed.
+1. Copy `.env.example` to `.env`, fill in real values, and add your Alpha Vantage API key under `API_TOKEN`.
 2. Create and activate a Python 3.11+ virtual environment.
 3. Install the package:
    ```sh
@@ -21,4 +21,4 @@ Streamlit dashboard for exploring portfolio holdings, performance, and configura
 
 ## Environment Variables
 
-Load values via `.env` (see `.env.example`). The app uses `PORTFOLIO_NAME`, `DATA_SOURCE`, and `API_TOKEN` when present.
+Load values via `.env` (see `.env.example`). The app uses `PORTFOLIO_NAME`, `DATA_SOURCE`, `API_TOKEN`, and `LOG_LEVEL` (defaults to `INFO`) when present. Stock prices and history are pulled from the Alpha Vantage API documented at [https://www.alphavantage.co](https://www.alphavantage.co).

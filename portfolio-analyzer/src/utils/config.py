@@ -14,6 +14,7 @@ class AppConfig:
     portfolio_name: str
     data_source: str
     api_token: str | None
+    log_level: str
 
 
 def _ensure_env_loaded() -> None:
@@ -26,4 +27,5 @@ def get_app_config() -> AppConfig:
         portfolio_name=os.getenv("PORTFOLIO_NAME", "Portfolio Analyzer"),
         data_source=os.getenv("DATA_SOURCE", "simulated"),
         api_token=os.getenv("API_TOKEN") or None,
+        log_level=os.getenv("LOG_LEVEL", "INFO"),
     )
