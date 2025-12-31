@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=65.5.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portfolio-analyzer"
+version = "0.1.0"
+description = "Streamlit dashboard for exploring portfolio holdings and performance."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.30",
+    "python-dotenv>=1.0",
+]
+authors = [
+    { name = "Codex" },
+]
+
+[project.urls]
+homepage = "https://example.com/portfolio-analyzer"
+repository = "https://example.com/portfolio-analyzer"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.0.300",
+    "pytest>=7.0",
+]
+
+[tool.ruff]
+line-length = 100
+extend-select = ["E", "F", "W"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+python_files = "test_*.py"
